@@ -11,7 +11,7 @@ export const Footer = () => {
   const currentYear = new Date().getFullYear();
   const footerData = t.footer;
 
-  // Social Media Icons using SVG
+  // أيقونات السوشيال ميديا - كل واحدة بلونها
   const socialLinks = [
     {
       name: 'Facebook',
@@ -21,7 +21,8 @@ export const Footer = () => {
         </svg>
       ),
       url: 'https://facebook.com/flashcode',
-      color: 'hover:text-[#1877f2]'
+      color: 'hover:text-[#1877f2]',
+      bg: 'hover:bg-[#1877f2]/20'
     },
     {
       name: 'Instagram',
@@ -31,7 +32,8 @@ export const Footer = () => {
         </svg>
       ),
       url: 'https://instagram.com/flashcode',
-      color: 'hover:text-[#e4405f]'
+      color: 'hover:text-[#e4405f]',
+      bg: 'hover:bg-[#e4405f]/20'
     },
     {
       name: 'LinkedIn',
@@ -41,7 +43,8 @@ export const Footer = () => {
         </svg>
       ),
       url: 'https://linkedin.com/company/flashcode',
-      color: 'hover:text-[#0a66c2]'
+      color: 'hover:text-[#0a66c2]',
+      bg: 'hover:bg-[#0a66c2]/20'
     },
     {
       name: 'WhatsApp',
@@ -51,7 +54,8 @@ export const Footer = () => {
         </svg>
       ),
       url: 'https://wa.me/20123456789',
-      color: 'hover:text-[#25d366]'
+      color: 'hover:text-[#25d366]',
+      bg: 'hover:bg-[#25d366]/20'
     }
   ];
 
@@ -64,14 +68,13 @@ export const Footer = () => {
     { id: 'about', label: t.navbar.links.about },
     { id: 'services', label: t.navbar.links.services },
     { id: 'projects', label: t.navbar.links.projects },
+    { id: 'contact', label: t.navbar.links.contact }, // ← أضفنا الـ Contact
   ];
 
   return (
     <footer className="bg-[#0a1a3a] border-t border-white/10 relative">
-      {/* Top Glow Line */}
       <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#08CBE8] to-transparent shadow-[0_0_20px_rgba(8,203,232,0.3)]" />
 
-      {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#061A46] to-[#0a1a3a] pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
@@ -79,23 +82,21 @@ export const Footer = () => {
           
           {/* Brand Column */}
           <div className="space-y-3">
-            <div className="flex items-center gap-2.5">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#1264F5] via-[#08CBE8] to-[#0BAA9A] flex items-center justify-center shadow-[0_8px_30px_rgba(8,203,232,0.25)] flex-shrink-0">
-                <span className="text-white font-black text-xl">F</span>
-              </div>
-              <div>
-                <div className="font-bold text-white text-[15px] tracking-tight leading-tight">
-                  {footerData.brand}
-                </div>
-                <div className="text-[8px] tracking-[0.25em] font-medium text-white/40 leading-tight">
-                  {footerData.tagline}
-                </div>
-              </div>
-            </div>
+            <a
+              href="#hero"
+              className="group block"
+            >
+              <img
+                src="/logo.png"
+                alt="Flash Code - Software Solutions"
+                className="h-14 sm:h-16 md:h-[72px] transition-all duration-300 group-hover:scale-105"
+              />
+            </a>
             <p className="text-white/40 text-xs leading-relaxed max-w-xs">
               {footerData.description}
             </p>
             
+            {/* Social Icons - كل واحدة بلونها */}
             <div className="flex gap-2 pt-1">
               {socialLinks.map((social, index) => (
                 <a
@@ -109,8 +110,10 @@ export const Footer = () => {
                     bg-white/5 border border-white/10
                     text-white/40 hover:text-white
                     transition-all duration-300
-                    hover:bg-white/10 hover:scale-110 hover:border-white/20
+                    hover:scale-110 hover:shadow-lg
                     ${social.color}
+                    ${social.bg}
+                    hover:border-transparent
                   `}
                   aria-label={social.name}
                 >
@@ -120,7 +123,7 @@ export const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Quick Links - مع إضافة Contact */}
           <div>
             <h3 className="text-white/60 font-semibold text-[10px] tracking-wider mb-3 uppercase">
               {footerData.quickLinks}
@@ -181,7 +184,6 @@ export const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Bar */}
         <div className="mt-10 pt-5 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-white/20 text-[10px] text-center sm:text-left">
             &copy; {currentYear} {footerData.brand}. {footerData.rights}

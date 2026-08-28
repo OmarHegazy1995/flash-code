@@ -22,6 +22,7 @@ export default {
         'float': 'float 6s ease-in-out infinite',
         'ribbon': 'ribbonMove 12s linear infinite',
         'ribbon-reverse': 'ribbonMoveReverse 15s linear infinite',
+        'pulse-slow': 'pulse 3s ease-in-out infinite',
       },
       keyframes: {
         fadeUp: {

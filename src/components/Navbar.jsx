@@ -13,9 +13,9 @@ export const Navbar = () => {
     { id: 'about', label: t.navbar.links.about, href: '#about' },
     { id: 'services', label: t.navbar.links.services, href: '#services' },
     { id: 'projects', label: t.navbar.links.projects, href: '#projects' },
+    { id: 'contact', label: t.navbar.links.contact, href: '#contact' }, // ← أضفنا الـ Contact
   ];
 
-  // ========== SCROLL STATE ==========
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 30);
@@ -25,7 +25,6 @@ export const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // ========== ACTIVE SECTION ==========
   useEffect(() => {
     const sections = links
       .map((link) => document.getElementById(link.id))
@@ -58,7 +57,6 @@ export const Navbar = () => {
     }
   };
 
-  // تحديد إذا كنا في الـ Hero section
   const isHero = activeSection === 'hero';
 
   return (
@@ -101,48 +99,17 @@ export const Navbar = () => {
                 e.preventDefault();
                 handleNavigation('hero');
               }}
-              className="group flex items-center gap-3 shrink-0 cursor-pointer"
+              className="group flex items-center shrink-0 cursor-pointer"
             >
-              <div
+              <img
+                src="/logo.png"
+                alt="Flash Code - Software Solutions"
                 className={`
-                  relative w-10 h-10 rounded-xl overflow-hidden
-                  flex items-center justify-center
-                  bg-gradient-to-br from-[#1264F5] via-[#08CBE8] to-[#0BAA9A]
-                  shadow-[0_8px_30px_rgba(8,203,232,0.25)]
-                  transition-all duration-500
-                  group-hover:scale-105 group-hover:shadow-[0_8px_40px_rgba(8,203,232,0.4)]
+                  h-14 sm:h-16 md:h-[72px]
+                  transition-all duration-300
+                  group-hover:scale-105
                 `}
-              >
-                <span
-                  className={`
-                    absolute w-16 h-2 -rotate-45 bg-white/30
-                    -translate-x-6 group-hover:translate-x-6
-                    transition-transform duration-700
-                  `}
-                />
-                <span className="relative text-white font-black text-xl tracking-tight">
-                  F
-                </span>
-              </div>
-
-              <div className="hidden sm:block">
-                <div
-                  className={`
-                    font-bold text-[17px] tracking-tight transition-colors
-                    ${isScrolled || !isHero ? 'text-white' : 'text-white'}
-                  `}
-                >
-                  {t.navbar.brand}
-                </div>
-                <div
-                  className={`
-                    text-[8px] tracking-[0.28em] font-medium transition-colors
-                    ${isScrolled || !isHero ? 'text-white/50' : 'text-white/60'}
-                  `}
-                >
-                  {t.navbar.tagline}
-                </div>
-              </div>
+              />
             </a>
 
             {/* ===== DESKTOP NAV ===== */}

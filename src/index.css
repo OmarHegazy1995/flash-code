@@ -15,6 +15,7 @@
     @apply font-sans antialiased bg-[#061A46] text-white overflow-x-hidden;
   }
 
+  /* Custom Scrollbar - Matching Brand Colors */
   ::-webkit-scrollbar {
     @apply w-2;
   }
@@ -26,14 +27,76 @@
   ::-webkit-scrollbar-thumb {
     @apply bg-gradient-to-b from-[#1264F5] via-[#08CBE8] to-[#0BAA9A] rounded-full;
   }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gradient-to-b from-[#0BAA9A] via-[#08CBE8] to-[#1264F5];
+  }
 }
 
 @layer utilities {
+  /* Brand Gradients */
   .bg-gradient-brand {
     @apply bg-gradient-to-r from-[#1264F5] via-[#08CBE8] to-[#0BAA9A];
   }
 
+  .bg-gradient-brand-vertical {
+    @apply bg-gradient-to-b from-[#1264F5] via-[#08CBE8] to-[#0BAA9A];
+  }
+
   .text-gradient-brand {
     @apply bg-gradient-to-r from-[#1264F5] via-[#08CBE8] to-[#0BAA9A] bg-clip-text text-transparent;
+  }
+
+  /* Brand Colors */
+  .bg-midnight {
+    @apply bg-[#061A46];
+  }
+  
+  .bg-electric-blue {
+    @apply bg-[#1264F5];
+  }
+  
+  .bg-signal-cyan {
+    @apply bg-[#08CBE8];
+  }
+  
+  .bg-growth-teal {
+    @apply bg-[#0BAA9A];
+  }
+  
+  .bg-cloud-white {
+    @apply bg-[#F3F7FB];
+  }
+
+  .text-midnight {
+    @apply text-[#061A46];
+  }
+  
+  .text-electric-blue {
+    @apply text-[#1264F5];
+  }
+  
+  .text-signal-cyan {
+    @apply text-[#08CBE8];
+  }
+  
+  .text-growth-teal {
+    @apply text-[#0BAA9A];
+  }
+  
+  .text-cloud-white {
+    @apply text-[#F3F7FB];
+  }
+
+  .border-electric-blue {
+    @apply border-[#1264F5];
+  }
+  
+  .border-signal-cyan {
+    @apply border-[#08CBE8];
+  }
+  
+  .border-growth-teal {
+    @apply border-[#0BAA9A];
   }
 }
