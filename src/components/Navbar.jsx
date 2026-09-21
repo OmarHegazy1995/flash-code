@@ -13,7 +13,7 @@ export const Navbar = () => {
     { id: 'about', label: t.navbar.links.about, href: '#about' },
     { id: 'services', label: t.navbar.links.services, href: '#services' },
     { id: 'projects', label: t.navbar.links.projects, href: '#projects' },
-    { id: 'contact', label: t.navbar.links.contact, href: '#contact' }, // ← أضفنا الـ Contact
+    { id: 'contact', label: t.navbar.links.contact, href: '#contact' },
   ];
 
   useEffect(() => {
@@ -102,7 +102,7 @@ export const Navbar = () => {
               className="group flex items-center shrink-0 cursor-pointer"
             >
               <img
-                src="/logo.png"
+                src="logo.png"
                 alt="Flash Code - Software Solutions"
                 className={`
                   h-14 sm:h-16 md:h-[72px]
@@ -153,10 +153,11 @@ export const Navbar = () => {
 
             {/* ===== RIGHT ACTIONS ===== */}
             <div className="flex items-center gap-2 sm:gap-3">
+              {/* زر اللغة - يظهر في الديسكتوب */}
               <button
                 onClick={toggleLanguage}
                 className={`
-                  hidden sm:flex items-center gap-2 px-3 py-2 rounded-xl
+                  hidden lg:flex items-center gap-2 px-3 py-2 rounded-xl
                   text-xs font-semibold transition-all duration-300 border
                   ${
                     isScrolled || !isHero
@@ -169,6 +170,25 @@ export const Navbar = () => {
                 <span>{t.navbar.language}</span>
               </button>
 
+              {/* زر اللغة - يظهر في الموبايل خارج التوجر */}
+              <button
+                onClick={toggleLanguage}
+                className={`
+                  lg:hidden flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg
+                  text-[10px] font-semibold transition-all duration-300 border
+                  ${
+                    isScrolled || !isHero
+                      ? 'text-white/80 border-white/15 bg-white/5 hover:bg-white/10'
+                      : 'text-white border-white/20 bg-white/10 hover:bg-white/20'
+                  }
+                `}
+                aria-label="Toggle language"
+              >
+                <Globe2 size={13} />
+                <span>{t.navbar.language}</span>
+              </button>
+
+              {/* زر القائمة (المنيو) */}
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 aria-label="Toggle menu"
@@ -227,18 +247,7 @@ export const Navbar = () => {
                   </a>
                 ))}
 
-                <button
-                  onClick={toggleLanguage}
-                  className="mt-2 flex items-center justify-between px-4 py-4 rounded-xl text-white/70 bg-white/5 hover:bg-white/10 transition"
-                >
-                  <span className="flex items-center gap-2">
-                    <Globe2 size={17} />
-                    <span className="text-sm">Language</span>
-                  </span>
-                  <span className="text-sm font-semibold text-[#08CBE8]">
-                    {t.navbar.language}
-                  </span>
-                </button>
+                {/* زر اللغة جوه التوجر (تم إزالته عشان بقى بره) */}
               </div>
             </div>
           </div>

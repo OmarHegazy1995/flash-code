@@ -4,7 +4,7 @@
       "hero": "Home",
       "about": "About",
       "services": "Services",
-      "projects": "Projects",
+      "projects": "Our Work",
       "contact": "Contact"
     },
     "language": "AR",
@@ -12,141 +12,161 @@
     "tagline": "SOFTWARE SOLUTIONS"
   },
   "hero": {
-    "eyebrow": "Software solutions built for momentum",
+    "eyebrow": "Software solutions built for growth",
     "title": "BUILD FASTER.",
-    "subtitle": "Turn your idea into a complete digital system.",
-    "description": "We build custom web systems, mobile applications, ERP platforms and digital products combining professional design, high performance and scalable engineering.",
-    "cta": "Start a project",
-    "cta2": "View our work",
-    "tags": ["Full Stack Engineering", "Scalable Architecture", "Responsive by Design"]
+    "subtitle": "From idea to a complete system.",
+    "description": "We build custom web apps, mobile apps, ERP systems, and tailored platforms, combining modern design, high performance, and scalable architecture.",
+    "cta": "Start your project",
+    "cta2": "See our work",
+    "tags": ["Full Stack Engineering", "Scalable Architecture", "Responsive Design"]
   },
   "about": {
     "title": "About Flash Code",
     "subtitle": "Build fast. Scale with confidence.",
-    "description": "We transform business ideas into useful software. Our team combines technical excellence with creative problem-solving to deliver solutions that drive real business value.",
+    "description": "We turn ideas into useful software. Our team blends technical expertise with creativity to deliver solutions that truly add value to your business.",
     "mission": "Our Mission",
-    "missionText": "To empower businesses with cutting-edge technology that accelerates growth and innovation.",
+    "missionText": "Empower businesses with cutting-edge technology that drives growth and innovation.",
     "vision": "Our Vision",
-    "visionText": "To become the most trusted technology partner for ambitious teams worldwide.",
+    "visionText": "To be the most trusted tech partner for ambitious teams worldwide.",
     "values": "Our Values",
     "valuesList": ["Clarity", "Ownership", "Craft", "Momentum"]
   },
   "services": {
     "title": "Our Services",
     "subtitle": "End-to-end software solutions",
-    "description": "We provide comprehensive development services across the entire technology stack.",
+    "description": "We offer a full range of development services to cover all your technical needs.",
     "services": [
       {
         "icon": "🌐",
         "title": "Web Development",
-        "description": "Custom web applications built with modern frameworks for optimal performance and user experience."
+        "description": "Professional web apps built with the latest tech, for a fast and seamless user experience."
       },
       {
         "icon": "📱",
         "title": "Mobile Apps",
-        "description": "Native and cross-platform mobile applications designed for iOS and Android devices."
+        "description": "Native and cross-platform mobile apps, designed to deliver a great experience on every device."
       },
       {
-        "icon": "☁️",
-        "title": "Cloud Solutions",
-        "description": "Scalable cloud infrastructure and DevOps solutions for enterprise-grade applications."
+        "icon": "🎨",
+        "title": "UI/UX Design",
+        "description": "User-friendly and visually stunning designs, focused on making interactions smooth and enjoyable."
       },
       {
-        "icon": "🤖",
-        "title": "Automation",
-        "description": "Intelligent automation solutions that streamline workflows and boost productivity."
+        "icon": "🛒",
+        "title": "E-Commerce Solutions",
+        "description": "Full-featured online stores with secure payments and easy inventory management for a smooth shopping experience."
       },
       {
         "icon": "📊",
         "title": "ERP Systems",
-        "description": "Comprehensive ERP solutions tailored to your business processes and requirements."
+        "description": "Integrated management systems, tailored to your business needs to streamline operations and boost efficiency."
       },
       {
-        "icon": "🔒",
-        "title": "Cybersecurity",
-        "description": "Robust security solutions to protect your digital assets and ensure compliance."
+        "icon": "🚀",
+        "title": "SEO & Digital Marketing",
+        "description": "Smart SEO strategies and marketing campaigns to boost your online presence and attract more customers."
       }
     ],
-    "cta": "View All Services"
+    "cta": "Explore Our Projects"
   },
   "projects": {
-    "title": "Our Projects",
-    "subtitle": "Delivering excellence, one project at a time",
-    "description": "Explore our portfolio of successful projects across various industries.",
+    "title": "Featured Projects",
+    "subtitle": "Some of the projects I've worked on",
+    "viewAll": "View All Projects",
+    "showLess": "Show Less",
     "projects": [
       {
-        "title": "E-Commerce Platform",
-        "category": "Web Development",
-        "description": "A full-featured e-commerce platform with real-time inventory and payment processing."
-      },
-      {
-        "title": "Healthcare App",
-        "category": "Mobile Development",
-        "description": "A HIPAA-compliant mobile application for patient management and telemedicine."
-      },
-      {
-        "title": "Cloud Migration",
-        "category": "Cloud Solutions",
-        "description": "Enterprise-scale cloud migration with zero downtime and enhanced performance."
-      },
-      {
-        "title": "ERP Implementation",
+        "title": "Cashier System",
         "category": "ERP Systems",
-        "description": "Custom ERP solution integrating finance, HR, and operations management."
+        "description": "A complete point-of-sale system with inventory management, billing, and real-time reporting.",
+        "image": "cashier.png",
+        "liveUrl": "http://cachierapp.runasp.net/Account/Login?ReturnUrl=%2F",
+        "technologies": ["ASP.NET", "SQL Server", "Bootstrap", "JavaScript"]
       },
       {
-        "title": "AI Chatbot",
-        "category": "Automation",
-        "description": "Intelligent chatbot solution powered by natural language processing."
+        "title": "Online Clinic",
+        "category": "Healthcare",
+        "description": "An all-in-one clinic management system with appointments, patient records, and telemedicine.",
+        "image": "clinic.png",
+        "liveUrl": "http://onlineclinic.runasp.net/Account/Login?ReturnUrl=%2F",
+        "technologies": ["ASP.NET Core", "SQL Server", "Tailwind", "React"]
       },
       {
-        "title": "Security Suite",
-        "category": "Cybersecurity",
-        "description": "Comprehensive security suite with threat detection and response capabilities."
+        "title": "HR Resources Platform",
+        "category": "HR Systems",
+        "description": "A comprehensive platform for employee management, recruitment, and performance tracking.",
+        "image": "hr.png",
+        "liveUrl": "https://resourcesone.com",
+        "technologies": ["React", "Node.js", "MongoDB", "Tailwind"]
+      },
+      {
+        "title": "SocialLab",
+        "category": "Web Development",
+        "description": "AI-powered social media platform with real-time insights, interactive dashboard, and measurable results.",
+        "image": "sociallab.png",
+        "liveUrl": "https://omarhegazy1995.github.io/SocialLab/",
+        "technologies": ["React", "Leaflet", "Socket.io", "Express"]
+      },
+      {
+        "title": "Yummy Restaurant Website",
+        "category": "Web Development",
+        "description": "Complete website and menu system for a restaurant brand, featuring online ordering, reservation system, and delivery integration.",
+        "image": "yummy.png",
+        "liveUrl": "https://omarhegazy1995.github.io/yummy/",
+        "technologies": ["React", "JavaScript", "CSS3", "Node.js"]
+      },
+      {
+        "title": "Employee Data Archive System",
+        "category": "HR Systems",
+        "description": "JavaScript-based system for managing and archiving employee data with secure storage and advanced search.",
+        "image": "employee.png",
+        "liveUrl": "https://omarhegazy1995.github.io/database-employee/",
+        "technologies": ["Next.js", "React", "MongoDB", "Node.js", "Tailwind CSS"]
       }
-    ],
-    "cta": "View All Projects"
+    ]
   },
   "testimonials": {
     "title": "What Our Clients Say",
     "subtitle": "Trusted by businesses worldwide",
-    "description": "Hear from our clients about their experience working with Flash Code.",
+    "description": "Here's what our clients think about working with us.",
     "testimonials": [
       {
         "name": "Sarah Ahmed",
         "role": "CEO, TechStart",
-        "content": "Flash Code transformed our idea into a market-ready product in record time. Their professionalism and technical expertise are unmatched."
+        "content": "Flash Code turned our idea into a market-ready product in record time. Their professionalism and technical skills are top-notch."
       },
       {
         "name": "Mohamed Kamel",
         "role": "CTO, CloudNest",
-        "content": "Working with Flash Code has been a game-changer. They delivered a scalable solution that exceeded our expectations."
+        "content": "Working with Flash Code was a game-changer. They delivered a complete solution that exceeded our expectations."
       },
       {
         "name": "Nadia Youssef",
         "role": "Product Manager, HealthTech",
-        "content": "The team's attention to detail and commitment to quality is exceptional. I highly recommend their services."
+        "content": "The team's attention to detail and quality of work is outstanding. I highly recommend their services."
       }
     ]
   },
   "contact": {
     "title": "Get in Touch",
     "subtitle": "Let's build something amazing together",
-    "description": "Have a project in mind? We'd love to hear from you. Let's discuss how we can help bring your vision to life.",
+    "description": "Have a project in mind? We'd love to hear from you. Let's talk about how we can help bring your vision to life.",
     "email": "hello@flashcode.dev",
-    "phone": "+20 123 456 789",
+    "phone": "+20 1553009484",
     "address": "Cairo, Egypt",
     "form": {
       "name": "Your Name",
       "email": "Your Email",
+      "phone": "Phone Number",
+      "subject": "Subject",
       "message": "Your Message",
-      "submit": "Send Message"
+      "submit": "Send"
     }
   },
   "footer": {
     "brand": "Flash Code",
     "tagline": "SOFTWARE SOLUTIONS",
-    "description": "Transform ideas into useful software. Build fast, scale with confidence.",
+    "description": "We turn ideas into useful software. Build fast, scale with confidence.",
     "quickLinks": "Quick Links",
     "contactInfo": "Contact Info",
     "stayConnected": "Stay Connected",
